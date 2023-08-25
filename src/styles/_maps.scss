@@ -1,8 +1,33 @@
 /// Maps
 
 /// Colours
-/// Colours - Grays
-$clr-gray-0: hsl(0, 0%, 100%);
+/// Colours - Blue
+$clr-blue-50: #e8edf2;
+$clr-blue-100: #d2dce6;
+$clr-blue-200: #a4b8cc;
+$clr-blue-300: #7795b3;
+$clr-blue-400: #497199;
+$clr-blue-500: #1c4e80;
+$clr-blue-600: #163e66;
+$clr-blue-700: #112f4d;
+$clr-blue-800: #0b1f33;
+$clr-blue-900: #06101a;
+
+$clr-blues: (
+  "50": $clr-blue-50,
+  "100": $clr-blue-100,
+  "200": $clr-blue-200,
+  "300": $clr-blue-300,
+  "400": $clr-blue-400,
+  "500": $clr-blue-500,
+  "600": $clr-blue-600,
+  "700": $clr-blue-700,
+  "800": $clr-blue-800,
+  "900": $clr-blue-900,
+);
+
+/// Colours - Gray
+$clr-gray-50: hsl(0, 0%, 100%);
 $clr-gray-100: hsl(0, 0%, 90%);
 $clr-gray-200: hsl(0, 0%, 80%);
 $clr-gray-300: hsl(0, 0%, 70%);
@@ -15,7 +40,7 @@ $clr-gray-900: hsl(0, 0%, 10%);
 $clr-gray-1000: hsl(0, 0%, 0%);
 
 $clr-grays: (
-  "0": $clr-gray-0,
+  "50": $clr-gray-50,
   "100": $clr-gray-100,
   "200": $clr-gray-200,
   "300": $clr-gray-300,
@@ -30,6 +55,7 @@ $clr-grays: (
 
 /// Colours - All
 $colours: (
+  "blue": $clr-blues,
   "gray": $clr-grays,
 );
 

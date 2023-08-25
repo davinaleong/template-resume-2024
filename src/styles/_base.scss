@@ -32,9 +32,45 @@
       --#{$key}-#{$size-key}: #{$val};
     }
   }
+
+  --wrapper-width: #{map-get($breakpoints, "xxl")};
 }
 
 body {
   font-family: var(--ff-primary);
   font-size: var(--fz-400);
+}
+
+.wrapper {
+  --_width: var(--wrapper-width);
+  --_spacer-inline: var(--v-400);
+  --_margin-inline: 0;
+
+  width: min(calc(100% - (var(--_spacer-inline) * 2)), var(--_width));
+  margin-inline-start: var(--_margin-inline);
+  margin-inline-end: var(--_margin-inline);
+}
+
+.wrapper-no-gutter {
+  --_spacer-inline: 0;
+}
+
+.wrapper-centered {
+  --_margin-inline: auto;
+}
+
+a {
+  --_clr: var(--clr-blue-500);
+  --_td: underline;
+
+  --_hover-clr: var(--clr-blue-300);
+  --_td: underline;
+
+  color: var(--_clr);
+  text-decoration: var(--_td);
+}
+
+a:hover {
+  color: var(--_hover-clr);
+  text-decoration: var(--_hover-td);
 }
