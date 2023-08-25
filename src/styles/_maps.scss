@@ -1,0 +1,261 @@
+/// Maps
+
+/// Colours
+/// Colours - Grays
+$clr-gray-0: hsl(0, 0%, 100%);
+$clr-gray-100: hsl(0, 0%, 90%);
+$clr-gray-200: hsl(0, 0%, 80%);
+$clr-gray-300: hsl(0, 0%, 70%);
+$clr-gray-400: hsl(0, 0%, 60%);
+$clr-gray-500: hsl(0, 0%, 50%);
+$clr-gray-600: hsl(0, 0%, 40%);
+$clr-gray-700: hsl(0, 0%, 30%);
+$clr-gray-800: hsl(0, 0%, 20%);
+$clr-gray-900: hsl(0, 0%, 10%);
+$clr-gray-1000: hsl(0, 0%, 0%);
+
+$clr-grays: (
+  "0": $clr-gray-0,
+  "100": $clr-gray-100,
+  "200": $clr-gray-200,
+  "300": $clr-gray-300,
+  "400": $clr-gray-400,
+  "500": $clr-gray-500,
+  "600": $clr-gray-600,
+  "700": $clr-gray-700,
+  "800": $clr-gray-800,
+  "900": $clr-gray-900,
+  "1000": $clr-gray-1000,
+);
+
+/// Colours - All
+$colours: (
+  "grays": $clr-grays,
+);
+
+/// Fonts
+/// Fonts - Font Families
+$ff-primary: #{Arial, Helvetica, sans-serif};
+$ff-secondary: #{Verdana, Helvetica, sans-serif};
+$ff-monospace: #{"Courier New", Courier, monospace};
+
+$font-families: (
+  "primary": $ff-primary,
+  "secondary": $ff-secondary,
+  "monospace": $ff-monospace,
+);
+
+/// Fonts - Font Sizes
+// 0px
+$fz-0: 0rem;
+// Step -3: 10.42px → 10.24px
+$fz-100: clamp(0.64rem, calc(0.66rem + -0.02vw), 0.65rem);
+// Step -2: 12.50px → 12.80px
+$fz-200: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.8rem);
+// Step -1: 15.00px → 16.00px
+$fz-300: clamp(0.94rem, calc(0.92rem + 0.11vw), 1rem);
+// Step 0: 18.00px → 20.00px
+$fz-400: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+// Step 1: 21.60px → 25.00px
+$fz-500: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+// Step 2: 25.92px → 31.25px
+$fz-600: clamp(1.62rem, calc(1.5rem + 0.58vw), 1.95rem);
+// Step 3: 31.10px → 39.06px
+$fz-700: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+// Step 4: 37.32px → 48.83px
+$fz-800: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+// Step 5: 44.79px → 61.04px
+$fz-900: clamp(2.8rem, calc(2.45rem + 1.77vw), 3.82rem);
+
+$font-sizes: (
+  "0": $fz-0,
+  "100": $fz-100,
+  "200": $fz-200,
+  "300": $fz-300,
+  "400": $fz-400,
+  "500": $fz-500,
+  "600": $fz-600,
+  "700": $fz-700,
+  "800": $fz-800,
+  "900": $fz-900,
+);
+
+/// Fonts - Font Weights
+$fw-thin: 100;
+$fw-extra-light: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fw-black: 900;
+
+$font-weights: (
+  "thin": $fw-thin,
+  "extra-light": $fw-extra-light,
+  "light": $fw-light,
+  "regular": $fw-regular,
+  "medium": $fw-medium,
+  "semi-bold": $fw-semi-bold,
+  "bold": $fw-bold,
+  "extra-bold": $fw-extra-bold,
+  "black": $fw-black,
+);
+
+/// Fonts - Font Styles
+$fs-normal: normal;
+$fs-italic: italic;
+$fs-oblique: oblique;
+
+$font-styles: (
+  "normal": $fs-normal,
+  "italic": $fs-italic,
+  "oblique": $fs-oblique,
+);
+
+/// Text
+/// Text  - Text Decorations
+$td-none: none;
+$td-underline: underline;
+$td-overline: overline;
+$td-line-through: line-through;
+
+$text-decorations: (
+  "none": $td-none,
+  "underline": $td-underline,
+  "overline": $td-overline,
+  "line-through": $td-line-through,
+);
+
+/// Text - Text Aligns
+$ta-left: left;
+$ta-center: center;
+$ta-right: right;
+
+$text-aligns: (
+  "left": $ta-left,
+  "center": $ta-center,
+  "right": $ta-right,
+);
+
+/// Text - Text Transforms
+$tt-none: none;
+$tt-lowercase: lowercase;
+$tt-uppercase: uppercase;
+$tt-capitalize: capitalize;
+
+$text-transforms: (
+  "none": $tt-none,
+  "lowercase": $tt-lowercase,
+  "uppercase": $tt-uppercase,
+  "capitalize": $tt-capitalize,
+);
+
+/// Breakpoints
+$breakpoints: (
+  "xs": 0,
+  "sm": 578px,
+  "md": 768px,
+  "lg": 844px,
+  "xl": 992px,
+  "xxl": 1200px,
+  "xxxl": 1400px,
+);
+
+/// Spacers
+/// Spacers - Directions
+$sd-all: "all";
+$sd-inline: "inline";
+$sd-inline-start: "inline-start";
+$sd-inline-end: "inline-end";
+$sd-block: "block";
+$sd-block-start: "block-start";
+$sd-block-end: "block-end";
+
+$spacer-directions: (
+  "all": $sd-all,
+  "inline": $sd-inline,
+  "inline-start": $sd-inline-start,
+  "inline-end": $sd-inline-end,
+  "block": $sd-block,
+  "block-start": $sd-block-start,
+  "block-end": $sd-block-end,
+);
+
+/// Spacers - Spacer Sizes
+/// clamp(0.13rem, calc(0.13rem + 0vw), 0.13rem)
+// Size 0: 0
+$ss-auto: auto;
+// Size 0: 0
+$ss-0: 0;
+// Size 50: 2px → 2px
+$ss-50: (
+  "min": 0.13,
+  "ideal": 0.13,
+  "variation": 0vw,
+  "max": 0.13,
+);
+// Size 100: 5px → 5px
+$ss-100: (
+  "min": 0.31,
+  "ideal": 0.31,
+  "variation": 0vw,
+  "max": 0.31,
+);
+// Size 200: 9px → 10px
+$ss-200: (
+  "min": 0.56,
+  "ideal": 0.54,
+  "variation": 0.11vw,
+  "max": 0.63,
+);
+// Size 300: 14px → 15px
+$ss-300: (
+  "min": 0.88,
+  "ideal": 0.85,
+  "variation": 0.11vw,
+  "max": 0.94,
+);
+// Size 400: 18px → 20px
+$ss-400: (
+  "min": 1.13,
+  "ideal": 1.08,
+  "variation": 0.22vw,
+  "max": 1.25,
+);
+// Size 500: 27px → 30px
+$ss-500: (
+  "min": 1.69,
+  "ideal": 1.62,
+  "variation": 0.33vw,
+  "max": 1.88,
+);
+// Size 600: 36px → 40px
+$ss-600: (
+  "min": 2.25,
+  "ideal": 2.16,
+  "variation": 0.43vw,
+  "max": 2.5,
+);
+// Size 700: 54px → 60px
+$ss-700: (
+  "min": 3.38,
+  "ideal": 3.24,
+  "variation": 0.65vw,
+  "max": 3.75,
+);
+// Size 800: 72px → 80px
+$ss-800: (
+  "min": 4.5,
+  "ideal": 4.33,
+  "variation": 0.87vw,
+  "max": 5,
+);
+// Size 900: 108px → 120px
+$ss-900: (
+  "min": 6.75,
+  "ideal": 6.49,
+  "variation": 1.3vw,
+  "max": 7.5,
+);

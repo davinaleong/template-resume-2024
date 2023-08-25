@@ -1,0 +1,9 @@
+/// Functions
+@function spacer($spacer, $unit: "px") {
+  $min: map-get($spacer, "min");
+  $ideal: map-get($spacer, "ideal");
+  $variation: map-get($spacer, "variation");
+  $max: map-get($spacer, "max");
+
+  @return "clamp(#{$min+$unit}, calc(#{$ideal+$unit} + #{$variation}), #{$max+$unit})";
+}
