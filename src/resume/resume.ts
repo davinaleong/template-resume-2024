@@ -8,7 +8,7 @@ import {
   EducationInterface,
   CertificateInterface,
   OtherInterface,
-} from "./interfaces"
+} from "../interfaces"
 
 /// #region Personal Info
 const email: LinkInterface = {

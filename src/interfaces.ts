@@ -1,3 +1,5 @@
+/// Interfaces
+/// #region Resume
 export interface ResumeInterface {
   personalInfo: PersonalInfoInterface
   objective: String
@@ -51,3 +53,4 @@ export interface OtherInterface {
   name: String
   items: Array<LinkInterface>
 }
+/// #endregion
