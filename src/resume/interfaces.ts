@@ -1,33 +1,33 @@
-export interface IResume {
-  personalInfo: IPersonalInfo
+export interface ResumeInterface {
+  personalInfo: PersonalInfoInterface
   objective: String
-  skills: Array<ISkill>
-  experience: Array<IExperience>
-  education: Array<IEducation>
-  certificates: Array<ICertificate>
-  others?: Array<IOther>
+  skills: Array<SkillInterface>
+  experience: Array<ExperienceInterface>
+  education: Array<EducationInterface>
+  certificates: Array<CertificateInterface>
+  others?: Array<OtherInterface>
   hobbies?: Array<String>
 }
 
-export interface IPersonalInfo {
+export interface PersonalInfoInterface {
   name: String
   address: String
-  email: ILink
-  socialMedia: Array<ILink>
+  email: LinkInterface
+  socialMedia: Array<LinkInterface>
 }
 
-export interface ILink {
+export interface LinkInterface {
   label: String
   url: String
   target?: String
 }
 
-export interface ISkill {
+export interface SkillInterface {
   name: String
   items: Array<String>
 }
 
-export interface IExperience {
+export interface ExperienceInterface {
   name: String
   dates: Array<String>
   location: String
@@ -35,19 +35,19 @@ export interface IExperience {
   items: Array<String>
 }
 
-export interface IEducation {
+export interface EducationInterface {
   name: String
   dates: Array<String>
   location: String
 }
 
-export interface ICertificate {
+export interface CertificateInterface {
   name: String
   dates: Array<String>
   location: String
 }
 
-export interface IOther {
+export interface OtherInterface {
   name: String
   dates: Array<String>
   location: String

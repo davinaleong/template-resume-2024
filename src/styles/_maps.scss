@@ -1,6 +1,6 @@
 /// Maps
 
-/// Colours
+/// #region Colours
 /// Colours - Blue
 $clr-blue-50: #e8edf2;
 $clr-blue-100: #d2dce6;
@@ -58,8 +58,9 @@ $colours: (
   "blue": $clr-blues,
   "gray": $clr-grays,
 );
+/// #endregion
 
-/// Fonts
+/// #region Fonts
 /// Fonts - Font Families
 $ff-primary: #{Arial, Helvetica, sans-serif};
 $ff-secondary: #{Verdana, Helvetica, sans-serif};
@@ -139,8 +140,9 @@ $font-styles: (
   "italic": $fs-italic,
   "oblique": $fs-oblique,
 );
+/// #endregion
 
-/// Text
+/// #region Text
 /// Text  - Text Decorations
 $td-none: none;
 $td-underline: underline;
@@ -177,6 +179,7 @@ $text-transforms: (
   "uppercase": $tt-uppercase,
   "capitalize": $tt-capitalize,
 );
+/// #endregion
 
 /// Breakpoints
 $breakpoints: (
@@ -189,7 +192,7 @@ $breakpoints: (
   "xxxl": 1400px,
 );
 
-/// Spacers
+/// #region Spacers
 /// Spacers - Directions
 $sd-all: "all";
 $sd-inline: "inline";
@@ -306,3 +309,4 @@ $spacer-units: (
   "f": $su-f,
   "v": $su-v,
 );
+/// #endregion
