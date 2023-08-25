@@ -2,7 +2,7 @@ export interface ResumeInterface {
   personalInfo: PersonalInfoInterface
   objective: String
   skills: Array<SkillInterface>
-  experience: Array<ExperienceInterface>
+  experiences: Array<ExperienceInterface>
   education: Array<EducationInterface>
   certificates: Array<CertificateInterface>
   others?: Array<OtherInterface>
@@ -17,7 +17,7 @@ export interface PersonalInfoInterface {
 }
 
 export interface LinkInterface {
-  label: String
+  name: String
   url: String
   target?: String
 }
@@ -49,6 +49,5 @@ export interface CertificateInterface {
 
 export interface OtherInterface {
   name: String
-  dates: Array<String>
-  location: String
+  items: Array<LinkInterface>
 }
