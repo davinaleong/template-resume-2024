@@ -30,7 +30,7 @@ $clr-grays: (
 
 /// Colours - All
 $colours: (
-  "grays": $clr-grays,
+  "gray": $clr-grays,
 );
 
 /// Fonts
@@ -188,13 +188,11 @@ $spacer-directions: (
 // Size 0: 0
 $ss-auto: auto;
 // Size 0: 0
-$ss-0: 0;
-// Size 50: 2px → 2px
-$ss-50: (
-  "min": 0.13,
-  "ideal": 0.13,
+$ss-0: (
+  "min": 0,
+  "ideal": 0,
   "variation": 0vw,
-  "max": 0.13,
+  "max": 0,
 );
 // Size 100: 5px → 5px
 $ss-100: (
@@ -258,4 +256,27 @@ $ss-900: (
   "ideal": 6.49,
   "variation": 1.3vw,
   "max": 7.5,
+);
+
+$spacer-sizes: (
+  "auto": $ss-auto,
+  "0": $ss-0,
+  "100": $ss-100,
+  "200": $ss-200,
+  "300": $ss-300,
+  "400": $ss-400,
+  "500": $ss-500,
+  "600": $ss-600,
+  "700": $ss-700,
+  "800": $ss-800,
+  "900": $ss-900,
+);
+
+/// Spacers - Spacer Units
+$su-f: "rem";
+$su-v: "em";
+
+$spacer-units: (
+  "f": $su-f,
+  "v": $su-v,
 );

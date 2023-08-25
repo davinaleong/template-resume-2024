@@ -1,20 +1,7 @@
 import "./styles/app.scss"
-import logo from "./assets/images/logo.svg"
-import { setupCounter } from "./counter.ts"
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${logo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
+    <h1 class="ff-primary fz-900 m-inline-start-f-400">Resume</h1>
   </div>
 `
-
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!)

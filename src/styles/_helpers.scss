@@ -1,0 +1,96 @@
+/// Helpers
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.flow > * + * {
+  --_spacer: var(--v-400);
+
+  margin-top: var(--_spacer);
+}
+
+/// Helpers - Colours
+@each $key, $value in $colours {
+  @each $swatch-key, $swatch-value in $value {
+    .text-#{$key}-#{$swatch-key} {
+      color: var(--clr-#{$key}-#{$swatch-key});
+    }
+
+    .bg-#{$key}-#{$swatch-key} {
+      background-color: var(--clr-#{$key}-#{$swatch-key});
+    }
+
+    .fill-#{$key}-#{$swatch-key} {
+      fill: var(--clr-#{$key}-#{$swatch-key});
+    }
+  }
+}
+
+/// Helpers - Font Families
+@each $key, $value in $font-families {
+  .ff-#{$key} {
+    font-family: var(--ff-#{$key});
+  }
+}
+
+@each $key, $value in $font-sizes {
+  .fz-#{$key} {
+    font-size: var(--fz-#{$key});
+  }
+}
+
+@each $key, $value in $font-weights {
+  .fw-#{$key} {
+    font-weight: var(--fw-#{$key});
+  }
+}
+
+@each $key, $value in $font-styles {
+  .fs-#{$key} {
+    font-style: var(--fs-#{$key});
+  }
+}
+
+@each $key, $value in $spacer-units {
+  @each $size-key, $size-value in $spacer-sizes {
+    @each $dir-key, $dir-value in $spacer-directions {
+      $var: var(--#{$key}-#{$size-key});
+
+      @if ($dir-key == "all") {
+        .m-#{$key}-#{$size-key} {
+          margin-inline-start: #{$var};
+          margin-inline-end: #{$var};
+          margin-block-start: #{$var};
+          margin-block-end: #{$var};
+        }
+
+        .p-#{$key}-#{$size-key} {
+          padding-inline-start: #{$var};
+          padding-inline-end: #{$var};
+          padding-block-start: #{$var};
+          padding-block-end: #{$var};
+        }
+      } @else {
+        .m-#{$dir-key}-#{$key}-#{$size-key} {
+          margin-#{$dir-key}: #{$var};
+        }
+
+        .m-n-#{$dir-key}-#{$key}-#{$size-key} {
+          margin-#{$dir-key}: calc(#{$var} * -1);
+        }
+
+        .p-#{$dir-key}-#{$key}-#{$size-key} {
+          padding-#{$dir-key}: #{$var};
+        }
+      }
+    }
+  }
+}
