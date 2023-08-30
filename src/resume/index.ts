@@ -4,6 +4,7 @@ import {
   educationComponent,
   experienceComponent,
   linkComponent,
+  otherComponent,
   skillComponent,
 } from "../components"
 import {
@@ -12,6 +13,7 @@ import {
   ExperienceInterface,
   EducationInterface,
   CertificateInterface,
+  OtherInterface,
 } from "../interfaces"
 
 export function initResume(
@@ -23,6 +25,8 @@ export function initResume(
     experiences,
     education,
     certificates,
+    hobbies,
+    others,
   }: ResumeInterface
 ) {
   let html = `
@@ -90,6 +94,19 @@ export function initResume(
     (certificate: CertificateInterface) =>
       (html += certificateComponent(certificate))
   )
+
+  others.forEach((other: OtherInterface) => (html += otherComponent(other)))
+
+  html += `
+    <hr>
+
+    <h2 class="fz-700">Hobbies</h2>
+  `
+
+  let hobbiesHtml = ``
+  hobbies.forEach((item: string) => (hobbiesHtml += `<li>${item}</li>`))
+
+  html += `<ul>${hobbiesHtml}</ul>`
 
   element.innerHTML = html
 }

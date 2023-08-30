@@ -19,11 +19,9 @@ export const linkComponent = ({ name, url, target }: LinkInterface): String => {
 
 export const skillComponent = ({ name, items }: SkillInterface) => {
   return `
-  <p>
-    <strong>${name}</strong><br>
-    ${items.join(`, `)}
-  </p>
-`
+  <h3 class="fz-500 fw-bold">${name}</h3>
+  <p>${items.join(`, `)}</p>
+  `
 }
 
 export const experienceComponent = ({
@@ -110,6 +108,24 @@ export const certificateComponent = ({
       )}</span></p>
       <p class="p-grid"><strong>Institution:</strong><span>${location}</span></p>
     </div>
+  `
+}
+
+export const otherComponent = ({ name, items }: OtherInterface) => {
+  let linksHtml = ``
+
+  items.forEach((link: LinkInterface, index: number) => {
+    linksHtml += linkComponent(link)
+    if (index < items.length - 1) {
+      linksHtml += `, `
+    }
+  })
+
+  return `
+  <hr>
+
+  <h2 class="fz-700">${name}</h2>
+  <p>${linksHtml}</p>
   `
 }
 
