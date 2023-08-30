@@ -90,7 +90,7 @@ export const skills: Array<SkillInterface> = [
 /// #region Experience
 const gic: ExperienceInterface = {
   name: "Government Investment Company",
-  dates: ["2023-05-01", "now"],
+  dates: ["2023-05-01", "Present"],
   location: "Tanjong Pagar, Singapore",
   position: "Associate Systems Engineer",
   items: [
