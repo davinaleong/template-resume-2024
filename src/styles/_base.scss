@@ -74,3 +74,36 @@ a:hover {
   color: var(--_hover-clr);
   text-decoration: var(--_hover-td);
 }
+
+strong,
+b {
+  font-weight: var(--fw-bold);
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-weight: 80%;
+}
+
+sup {
+  font-weight: 80%;
+  vertical-align: top;
+}
+
+sub {
+  font-weight: 80%;
+  vertical-align: bottom;
+}
+
+code {
+  font-family: var(--ff-monospace);
+}
+
+.personal-info {
+  display: grid;
+  grid-template-columns: 8ch auto;
+  gap: var(--v-100) var(--v-200);
+}

@@ -1,4 +1,3 @@
-import dayjs from "dayjs"
 import {
   ResumeInterface,
   PersonalInfoInterface,
@@ -17,19 +16,19 @@ const email: LinkInterface = {
 }
 
 const website: LinkInterface = {
-  name: "Website: DavDevs",
+  name: "Portfolio",
   url: "https://www.davina-devs.com/",
   target: "_blank",
 }
 
 const linkedIn: LinkInterface = {
-  name: "LinkedIn: Davina Leong",
+  name: "LinkedIn",
   url: "https://www.linkedin.com/in/davina-leong-s9115675g/",
   target: "_blank",
 }
 
 const gitHub: LinkInterface = {
-  name: "GitHub: Davina Leong",
+  name: "GitHub",
   url: "https://github.com/davinaleong/",
   target: "_blank",
 }
