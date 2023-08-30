@@ -53,4 +53,15 @@ export interface OtherInterface {
   name: String
   items: Array<LinkInterface>
 }
+
+export interface ConfigInterface {
+  showPersonalInfo: Boolean
+  showObjective: Boolean
+  showSkills: Boolean
+  showExperience: Boolean
+  showEducation: Boolean
+  showCertificates: Boolean
+  showOthers: Boolean
+  showHobbies: Boolean
+}
 /// #endregion
