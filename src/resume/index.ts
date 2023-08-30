@@ -1,13 +1,17 @@
 import {
+  certificateComponent,
+  certificationComponent,
+  educationComponent,
   experienceComponent,
   linkComponent,
   skillComponent,
 } from "../components"
 import {
-  ExperienceInterface,
   LinkInterface,
-  ResumeInterface,
   SkillInterface,
+  ExperienceInterface,
+  EducationInterface,
+  CertificateInterface,
 } from "../interfaces"
 
 export function initResume(
@@ -63,6 +67,28 @@ export function initResume(
   experiences.forEach(
     (experience: ExperienceInterface) =>
       (html += experienceComponent(experience))
+  )
+
+  html += `
+    <hr>
+
+    <h2 class="fz-700">Education</h2>
+  `
+
+  education.forEach(
+    (educationItem: EducationInterface) =>
+      (html += educationComponent(educationItem))
+  )
+
+  html += `
+    <hr>
+
+    <h2 class="fz-700">Certificates</h2>
+  `
+
+  certificates.forEach(
+    (certificate: CertificateInterface) =>
+      (html += certificateComponent(certificate))
   )
 
   element.innerHTML = html
